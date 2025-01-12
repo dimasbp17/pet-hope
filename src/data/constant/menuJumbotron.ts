@@ -11,17 +11,20 @@ export const menuJumbotron = [
     title: 'Dogs',
     description: 'Find pets on this platform',
     icon: 'FaDog',
+    link: '/dog',
   },
   {
     id: 3,
     title: 'Birds',
     description: 'Find pets on this platform',
     icon: 'LuBird',
+    link: '/bird',
   },
   {
     id: 4,
     title: 'Birds',
     description: 'Find pets on this platform',
-    icon: 'LuBird',
+    icon: 'IoPawSharp',
+    link: '/else',
   },
 ];

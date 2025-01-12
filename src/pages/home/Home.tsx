@@ -1,8 +1,17 @@
 import image_jumbotron from '../../../public/assets/images/image-jumbotron.png';
 import CardMenu from '../../components/card/CardMenu';
 import { menuJumbotron } from '../../data/constant/menuJumbotron';
+import { LuBird } from 'react-icons/lu';
+import { FaCat, FaDog } from 'react-icons/fa';
+import { IoPawSharp } from 'react-icons/io5';
 
 const Home = () => {
+  const iconMap: Record<string, React.ElementType> = {
+    FaCat: FaCat,
+    FaDog: FaDog,
+    LuBird: LuBird,
+    IoPawSharp: IoPawSharp,
+  };
   return (
     <>
       <div className="w-full font-poppins ">
@@ -24,13 +33,16 @@ const Home = () => {
           </div>
         </section>
         <section className="grid w-full grid-cols-2 gap-5 px-4 mt-20 lg:grid-cols-4 lg:px-20">
-          {menuJumbotron.map((menu) => (
-            <CardMenu
-              key={menu.id}
-              icon={<menu.icon />}
-              description={menu.description}
-            />
-          ))}
+          {menuJumbotron.map((menu) => {
+            const IconComponent = iconMap[menu.icon];
+            return (
+              <CardMenu
+                key={menu.id}
+                icon={IconComponent}
+                description={menu.description}
+              />
+            );
+          })}
         </section>
       </div>
     </>
