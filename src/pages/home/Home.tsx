@@ -1,5 +1,6 @@
 import image_jumbotron from '../../../public/assets/images/image-jumbotron.png';
 import CardMenu from '../../components/card/CardMenu';
+import { menuJumbotron } from '../../data/constant/menuJumbotron';
 
 const Home = () => {
   return (
@@ -22,8 +23,14 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="grid grid-cols-4 px-4 mt-20 lg:px-20">
-          <CardMenu />
+        <section className="grid w-full grid-cols-2 gap-5 px-4 mt-20 lg:grid-cols-4 lg:px-20">
+          {menuJumbotron.map((menu) => (
+            <CardMenu
+              key={menu.id}
+              icon={<menu.icon />}
+              description={menu.description}
+            />
+          ))}
         </section>
       </div>
     </>
