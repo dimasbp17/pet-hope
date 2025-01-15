@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 const Navbar: React.FC = () => {
   return (
     <>
-      <div className="fixed top-0 w-full px-4 py-5 bg-transparent text-text font-poppins lg:px-20 md:px-10">
+      <div className="top-0 w-full px-4 py-5 bg-transparent text-text font-poppins lg:px-20 md:px-10">
         <div className="flex items-center justify-between">
           <Link
             to={'/'}
-            className="text-xl font-bold"
+            className="text-2xl font-bold"
           >
             Pet Hope
           </Link>
