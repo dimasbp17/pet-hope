@@ -32,17 +32,23 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="grid w-full grid-cols-2 gap-5 px-4 mt-20 lg:grid-cols-4 lg:px-20">
-          {menuJumbotron.map((menu) => {
-            const IconComponent = iconMap[menu.icon];
-            return (
-              <CardMenu
-                key={menu.id}
-                icon={IconComponent}
-                description={menu.description}
-              />
-            );
-          })}
+        <section className="px-4 mt-10 lg:px-20">
+          <h1 className="mb-10 text-3xl font-bold text-center">
+            Temukan hewan peliharaan dan jadi teman anda
+          </h1>
+          <div className="grid w-full grid-cols-2 gap-5 lg:grid-cols-4">
+            {menuJumbotron.map((menu) => {
+              const IconComponent = iconMap[menu.icon];
+              return (
+                <CardMenu
+                  key={menu.id}
+                  icon={IconComponent}
+                  description={menu.description}
+                  link={menu.link}
+                />
+              );
+            })}
+          </div>
         </section>
       </div>
     </>
