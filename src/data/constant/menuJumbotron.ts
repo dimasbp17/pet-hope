@@ -20,13 +20,13 @@ export const menuJumbotron = [
     icon: 'LuBird',
     link: '/bird',
   },
-  {
-    id: 4,
-    title: 'Birds',
-    description: 'Find pets on this platform',
-    icon: 'IoPawSharp',
-    link: '/else',
-  },
+  // {
+  //   id: 4,
+  //   title: 'Birds',
+  //   description: 'Find pets on this platform',
+  //   icon: 'IoPawSharp',
+  //   link: '/else',
+  // },
   {
     id: 5,
     title: 'Shelters',
