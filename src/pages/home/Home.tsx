@@ -33,14 +33,14 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="px-4 mt-20 lg:px-20">
+        <section className="flex flex-col items-center justify-center h-screen px-4 lg:px-20">
           <h1 className="mb-10 text-5xl font-bold text-center">
             Find your new{' '}
             <span className="p-2 text-white rounded bg-primary">
               best friend
             </span>
           </h1>
-          <div className="grid w-full grid-cols-2 gap-3 lg:grid-cols-5">
+          <div className="grid w-full grid-cols-2 gap-3 lg:grid-cols-2">
             {menuJumbotron.map((menu) => {
               const IconComponent = iconMap[menu.icon];
               return (
