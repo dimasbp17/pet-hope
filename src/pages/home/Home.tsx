@@ -17,7 +17,7 @@ const Home = () => {
     <>
       <div className="w-full font-poppins ">
         <section>
-          <div className="grid items-center justify-center min-h-screen grid-cols-12 px-4 lg:px-20 from-primary to-[#08C2FF] bg-gradient-to-r">
+          <div className="grid items-center justify-center min-h-screen grid-cols-12 px-4 lg:px-[150px] bg-primary ">
             <div className="col-span-6 text-white">
               <h1 className="text-5xl font-bold leading-[60px]">
                 <span className="text-orange-500">Adopt</span> your pet,
@@ -33,14 +33,14 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="flex flex-col items-center justify-center h-screen px-4 lg:px-20">
+        <section className="flex flex-col items-center justify-center h-screen px-4 lg:px-[150px]">
           <h1 className="mb-10 text-5xl font-bold text-center">
             Find your new{' '}
             <span className="p-2 text-white rounded bg-primary">
               best friend
             </span>
           </h1>
-          <div className="grid w-full grid-cols-2 gap-3 lg:grid-cols-2">
+          <div className="grid w-full grid-cols-2 gap-5 lg:grid-cols-4">
             {menuJumbotron.map((menu) => {
               const IconComponent = iconMap[menu.icon];
               return (
@@ -48,11 +48,18 @@ const Home = () => {
                   key={menu.id}
                   icon={IconComponent}
                   title={menu.title}
-                  description={menu.description}
+                  // description={menu.description}
                   link={menu.link}
                 />
               );
             })}
+          </div>
+        </section>
+
+        <section className="flex flex-col items-center justify-center h-screen px-4 lg:px-[150px]">
+          <div className="grid grid-cols-2">
+            <div>lll</div>
+            <div>lll</div>
           </div>
         </section>
       </div>

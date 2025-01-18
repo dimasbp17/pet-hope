@@ -3,14 +3,14 @@ import { Link } from 'react-router-dom';
 interface CardMenuProps {
   icon: React.ElementType;
   title: string;
-  description: string;
+  // description: string;
   link: string;
 }
 
 const CardMenu: React.FC<CardMenuProps> = ({
   icon: Icon,
   title,
-  description,
+  // description,
   link,
 }) => {
   return (
@@ -21,7 +21,7 @@ const CardMenu: React.FC<CardMenuProps> = ({
             <Icon className="text-4xl text-orange-500" />
           </div>
           <h1 className="mt-3 text-lg font-bold text-center">{title}</h1>
-          <h1 className="text-center">{description}</h1>
+          {/* <h1 className="text-center">{description}</h1> */}
         </div>
       </Link>
     </>
